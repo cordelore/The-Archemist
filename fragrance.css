@@ -1,0 +1,332 @@
+/* ============================================================
+   FRAGRANCE — template condiviso per le 7 essenze
+   Accent per fragranza via --accent sul <body>
+   (fallback: --secondary-beige)
+============================================================ */
+
+/* ============================================================
+   NAV — forzata in stato "scrolled" (tema chiaro)
+============================================================ */
+.nav {
+  background: rgba(250, 249, 246, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 rgba(71, 55, 40, 0.06);
+}
+.nav .nav__logo { color: var(--primary-dark); }
+.nav .nav__links a { color: var(--text-muted); }
+.nav .nav__links a:hover { color: var(--primary-dark); }
+.nav .nav__sub-toggle { color: var(--text-muted); }
+.nav .nav__sub-toggle:hover,
+.nav .nav__item--has-sub.is-open .nav__sub-toggle { color: var(--primary-dark); }
+.nav .nav__cta { border-color: var(--primary-dark); color: var(--primary-dark); }
+.nav .nav__cta:hover { color: #fff; }
+.nav .nav__burger span { background: var(--primary-dark); }
+
+/* ============================================================
+   HERO (solo foto)
+============================================================ */
+.frag-hero {
+  position: relative;
+  width: 100%;
+  padding-top: var(--nav-h);
+  overflow: hidden;
+}
+
+.frag-hero__img {
+  display: block;
+  width: 100%;
+  height: clamp(420px, 78vh, 760px);
+  object-fit: cover;
+  object-position: center;
+  transform-origin: center;
+  animation:
+    fragHeroIn 1.4s var(--ease) both,
+    fragKenBurns 18s ease-in-out 1.4s infinite alternate;
+}
+
+/* entrata morbida al load */
+@keyframes fragHeroIn {
+  from { opacity: 0; transform: scale(1.12); }
+  to   { opacity: 1; transform: scale(1.06); }
+}
+/* drift lento e continuo → la foto "respira" */
+@keyframes fragKenBurns {
+  from { transform: scale(1.06) translate3d(0, 0, 0); }
+  to   { transform: scale(1.12) translate3d(-1.5%, -1.5%, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frag-hero__img { animation: fragHeroIn 1s ease both; }
+}
+
+/* ============================================================
+   INTRO (h2 + paragrafo sotto la foto)
+============================================================ */
+.frag-intro {
+  background: #faf9f6;
+  padding: 104px 80px 88px;
+}
+
+.frag-intro__inner {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.frag-intro__title {
+  font-size: clamp(34px, 4.4vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  color: var(--primary-dark);
+  margin-bottom: 32px;
+}
+
+.frag-intro__body {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.9;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   NOTE OLFATTIVE
+============================================================ */
+.frag-notes {
+  background: #faf9f6;
+  padding: 96px 80px 128px;
+}
+
+.frag-notes__header {
+  max-width: 880px;
+  margin: 0 auto;
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(71, 55, 40, 0.14);
+  text-align: center;
+}
+
+.frag-notes__title {
+  font-size: clamp(34px, 4.4vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  color: var(--primary-dark);
+  margin-bottom: 32px;
+}
+
+.frag-notes__intro {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.9;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ---- Lista note = piramide olfattiva (timeline verticale) ---- */
+.frag-notes__list {
+  --line-x: 92px;
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding-top: 88px;
+}
+/* linea verticale che collega i nodi testa → cuore → fondo */
+.frag-notes__list::before {
+  content: '';
+  position: absolute;
+  left: var(--line-x);
+  top: 104px;
+  bottom: 36px;
+  width: 1px;
+  background: linear-gradient(180deg,
+    rgba(168,151,126,0) 0%,
+    var(--accent, var(--secondary-beige)) 10%,
+    var(--accent, var(--secondary-beige)) 90%,
+    rgba(168,151,126,0) 100%);
+  opacity: 0.55;
+}
+
+/* ---- Single note ---- */
+.frag-note {
+  position: relative;
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  column-gap: 48px;
+  align-items: start;
+  text-align: left;
+  padding-bottom: 92px;
+}
+.frag-note:last-child { padding-bottom: 0; }
+
+/* nodo sulla linea */
+.frag-note::after {
+  content: '';
+  position: absolute;
+  left: var(--line-x);
+  top: 16px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent, var(--secondary-beige));
+  transform: translateX(-50%);
+  box-shadow: 0 0 0 6px #faf9f6;
+}
+
+.frag-note__num {
+  grid-column: 1;
+  font-size: clamp(40px, 5vw, 60px);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: rgba(71, 55, 40, 0.16);
+  text-align: right;
+}
+
+.frag-note__body { grid-column: 2; }
+
+.frag-note__label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--accent, var(--secondary-beige));
+  margin-bottom: 16px;
+}
+
+.frag-note__name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: clamp(24px, 3vw, 34px);
+  color: var(--primary-dark);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 18px;
+}
+
+.frag-note__desc {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.85;
+  max-width: 520px;
+}
+
+/* ============================================================
+   ANIMAZIONI
+============================================================ */
+.frag-anim {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.4s var(--ease), transform 1.4s var(--ease);
+  will-change: opacity, transform;
+}
+.frag-anim.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Paragrafi sotto gli h2: fade-in da sinistra */
+.frag-fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 1.1s var(--ease), transform 1.1s var(--ease);
+}
+.frag-fade-left.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============================================================
+   CTA FINALE (tema chiaro)
+============================================================ */
+.frag-final {
+  background: #faf9f6;
+  aspect-ratio: 16 / 9;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  text-align: center;
+}
+.frag-final__inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.frag-final__lede {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--accent, var(--secondary-beige));
+  margin-bottom: 22px;
+}
+.frag-final__title {
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--primary-dark);
+  margin-bottom: 48px;
+  line-height: 1.1;
+}
+
+/* ---- Variante con foto di sfondo 16:9 (tema scuro) ---- */
+.frag-final--photo {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background-image:
+    linear-gradient(180deg, rgba(20, 14, 9, 0.62), rgba(20, 14, 9, 0.78)),
+    var(--final-bg, none);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--primary-dark);
+}
+.frag-final--photo .frag-final__inner { position: relative; z-index: 1; }
+.frag-final--photo .frag-final__title { color: #fff; }
+.frag-final--photo .frag-final__lede { color: var(--accent, var(--secondary-beige)); }
+.frag-final--photo .btn {
+  background: #fff;
+  border-color: #fff;
+  color: var(--primary-dark);
+}
+.frag-final--photo .btn:hover { background: transparent; color: #fff; }
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 900px) {
+  .frag-hero__img { height: clamp(360px, 60vh, 560px); }
+  .frag-intro { padding: 72px 48px 64px; }
+  .frag-notes { padding: 96px 48px; }
+  .frag-notes__list { padding-top: 80px; }
+  .frag-note { padding-bottom: 76px; }
+}
+
+@media (max-width: 600px) {
+  .frag-hero__img { height: 56vh; min-height: 320px; }
+  .frag-final { aspect-ratio: 4 / 5; min-height: 500px; padding: 56px 24px; }
+  .frag-intro { padding: 56px 24px 48px; }
+  .frag-notes { padding: 80px 24px; }
+  .frag-notes__header { padding-bottom: 44px; }
+  .frag-notes__list { --line-x: 56px; padding-top: 64px; }
+  .frag-notes__list::before { top: 80px; }
+  .frag-note {
+    grid-template-columns: 44px 1fr;
+    column-gap: 28px;
+    padding-bottom: 64px;
+  }
+  .frag-note__num { font-size: clamp(30px, 9vw, 42px); }
+  .frag-note__label { margin-bottom: 14px; }
+  .frag-note__name { margin-bottom: 16px; }
+}

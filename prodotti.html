@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Prodotti &mdash; THE ARCHEMIST</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="prodotti.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav__left">
+      <button class="nav__burger" id="navBurger" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="nav__logo">The Archemist</a>
+    </div>
+    <ul class="nav__links">
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Visione
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="manifesto.html">Manifesto</a></li>
+          <li><a href="valori.html">Valori</a></li>
+        </ul>
+      </li>
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Essenze
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="animapura.html">Animapura</a></li>
+          <li><a href="esperide.html">Esperide</a></li>
+          <li><a href="noor.html">Noor</a></li>
+          <li><a href="kiyomi.html">Kiyomi</a></li>
+          <li><a href="nayeli.html">Nayeli</a></li>
+          <li><a href="joy.html">Joy</a></li>
+          <li><a href="aurum.html">Aurum</a></li>
+        </ul>
+      </li>
+      <li class="nav__item"><a href="rituale.html">Il Rituale</a></li>
+    </ul>
+    <button class="nav__cta" onclick="location.href='prodotti.html'">
+      <span>Diventa alchimista</span>
+    </button>
+  </nav>
+
+  <div class="nav__mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul class="nav__mobile-menu__links">
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Visione
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="manifesto.html">Manifesto</a></li>
+          <li><a href="valori.html">Valori</a></li>
+        </ul>
+      </li>
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Essenze
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="animapura.html">Animapura</a></li>
+          <li><a href="esperide.html">Esperide</a></li>
+          <li><a href="noor.html">Noor</a></li>
+          <li><a href="kiyomi.html">Kiyomi</a></li>
+          <li><a href="nayeli.html">Nayeli</a></li>
+          <li><a href="joy.html">Joy</a></li>
+          <li><a href="aurum.html">Aurum</a></li>
+        </ul>
+      </li>
+      <li class="nav__item"><a href="rituale.html">Il Rituale</a></li>
+    </ul>
+  </div>
+
+  <!-- ============================================================
+       INTRO
+  ============================================================ -->
+  <section class="prodpage-intro">
+    <div class="prodpage-intro__inner">
+      <p class="prodpage-intro__eyebrow">La collezione</p>
+      <h1 class="prodpage-intro__title">I nostri prodotti</h1>
+      <p class="prodpage-intro__body">Un sistema essenziale e modulare: una sola fiala concentrata, infinite possibilit&agrave; di diffusione. Scegli il formato che meglio si adatta al tuo spazio e al tuo rituale.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       I 3 PRODOTTI
+  ============================================================ -->
+  <section class="prodpage-section">
+    <div class="prodpage-section__head">
+      <h2 class="prodpage-section__title">Il sistema The Archemist</h2>
+    </div>
+    <div class="prodpage-grid prodpage-grid--3">
+
+      <div class="feat-anim">
+      <div class="card">
+        <div class="card__img">
+          <img src="product-refill.png" alt="Refill">
+        </div>
+        <div class="card__body">
+          <p class="card__tag">Essenziale e versatile</p>
+          <h3 class="card__name">Refill</h3>
+          <p class="card__desc">Include una fiala concentrata da 35 ml di composto profumante pronto a essere diluito in acqua. Ideale per ricaricare o trasformare qualsiasi contenitore in un diffusore elegante e personalizzato.</p>
+          <div class="card__foot">
+            <span class="card__price">19,90&euro;</span>
+            <a href="product-refill-v2.html" class="btn"><span>Scegli</span></a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="feat-anim">
+      <div class="card">
+        <div class="card__img">
+          <img src="archemist-11.png" alt="Kit Diffusore Spray">
+        </div>
+        <div class="card__body">
+          <p class="card__tag">Eleganza continua</p>
+          <h3 class="card__name">Kit Diffusore Spray</h3>
+          <p class="card__desc">Include una fiala da 35 ml, un raffinato contenitore in vetro con pompa spray e una pratica pompetta spray portatile, che trasforma la fiala in un secondo profumatore ideale da portare sempre con te.</p>
+          <div class="card__foot">
+            <span class="card__price">49,90&euro;</span>
+            <a href="product-kit-spray.html" class="btn"><span>Scegli</span></a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="feat-anim">
+      <div class="card">
+        <div class="card__img">
+          <img src="archemist-14.png" alt="Kit Diffusore a Bastoncini">
+        </div>
+        <div class="card__body">
+          <p class="card__tag">Diffusione continua</p>
+          <h3 class="card__name">Kit Diffusore a Bastoncini</h3>
+          <p class="card__desc">Composto da una fiala da 35 ml, un elegante contenitore in vetro, 8 bastoncini sintetici e la pompetta spray da utilizzare con la fialetta e trasformarla in un secondo profumatore.</p>
+          <div class="card__foot">
+            <span class="card__price">49,90&euro;</span>
+            <a href="product-kit-bastoncini.html" class="btn"><span>Scegli</span></a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="prodpage-divider"></div>
+
+  <!-- ============================================================
+       ACCESSORI
+  ============================================================ -->
+  <section class="prodpage-section prodpage-section--accessori">
+    <div class="prodpage-section__head">
+      <h2 class="prodpage-section__title">Accessori</h2>
+      <p class="prodpage-section__intro" data-reveal>Componenti di ricambio per rinnovare e completare il tuo rituale di diffusione.</p>
+    </div>
+    <div class="prodpage-grid prodpage-grid--2">
+
+      <div class="feat-anim">
+      <div class="card">
+        <div class="card__img">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <line x1="13" y1="30" x2="13" y2="5" stroke="#A8977E" stroke-width="1.1" stroke-linecap="round"/>
+            <line x1="18" y1="30" x2="18" y2="4" stroke="#A8977E" stroke-width="1.1" stroke-linecap="round"/>
+            <line x1="23" y1="30" x2="23" y2="6" stroke="#A8977E" stroke-width="1.1" stroke-linecap="round"/>
+          </svg>
+          <span>accessorio-bastoncini.jpg</span>
+        </div>
+        <div class="card__body">
+          <p class="card__tag">Ricambio</p>
+          <h3 class="card__name">Bastoncini</h3>
+          <p class="card__desc">Set di bastoncini sintetici di ricambio per il kit diffusore. Garantiscono una diffusione costante e omogenea della fragranza nell&rsquo;ambiente.</p>
+          <div class="card__foot">
+            <span class="card__price">9,90&euro;</span>
+            <button type="button" class="btn"><span>Aggiungi al carrello</span></button>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="feat-anim">
+      <div class="card">
+        <div class="card__img">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <rect x="13" y="12" width="10" height="18" rx="2" stroke="#A8977E" stroke-width="1.1"/>
+            <path d="M23 16 L30 16 L30 20 L23 20" stroke="#A8977E" stroke-width="1.1"/>
+            <circle cx="31" cy="18" r="2" stroke="#A8977E" stroke-width="1.1"/>
+            <rect x="15" y="7" width="6" height="5" rx="1" stroke="#A8977E" stroke-width="1.1"/>
+          </svg>
+          <span>accessorio-pompetta.jpg</span>
+        </div>
+        <div class="card__body">
+          <p class="card__tag">Ricambio</p>
+          <h3 class="card__name">Pompetta spray</h3>
+          <p class="card__desc">Pompetta spray portatile da avvitare direttamente sulla fiala da 35 ml, per trasformarla in un secondo profumatore sempre con te.</p>
+          <div class="card__foot">
+            <span class="card__price">7,90&euro;</span>
+            <button type="button" class="btn"><span>Aggiungi al carrello</span></button>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" id="footer">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__logo">The Archemist</p>
+        <p class="footer__tagline">The Archemist &egrave; una rivoluzione gentile.<br>Alchimia italiana, impatto minimo.</p>
+        <a href="prodotti.html" class="btn btn--light"><span>Diventa Alchimista</span></a>
+      </div>
+      <div>
+        <p class="footer__col-t">Navigazione</p>
+        <ul class="footer__ul">
+          <li><a href="index.html#manifesto">La visione</a></li>
+          <li><a href="index.html#essenze">Le essenze</a></li>
+          <li><a href="prodotti.html">I prodotti</a></li>
+          <li><a href="index.html#rituale">Come funziona</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-t">Legale</p>
+        <ul class="footer__ul">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-t">Resta aggiornato</p>
+        <p style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.42);line-height:1.75;margin-bottom:18px;">Nuove essenze e contenuti esclusivi. Niente spam, solo alchimia.</p>
+        <div class="footer__form">
+          <input type="email" class="footer__input" placeholder="La tua email">
+          <button class="footer__send" type="button">Iscriviti</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">&copy; 2026 The Archemist. Tutti i diritti riservati.</span>
+      <span class="footer__copy">Made in Italy</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="reveal.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      requestAnimationFrame(function () { document.body.classList.add('is-loaded'); });
+    });
+  </script>
+
+</body>
+</html>

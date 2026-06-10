@@ -1,0 +1,344 @@
+/* ============================================================
+   PAGINA IL RITUALE
+   Riusa variabili / nav / footer / btn da style.css
+   Prefisso `rt-` per evitare collisioni
+============================================================ */
+
+.rt-page { color: var(--primary-dark); background: #faf9f6; }
+/* rimuove texture scura + overlay di sfondo globali su questa pagina */
+.rt-page::before,
+.rt-page::after { display: none; }
+
+/* ============================================================
+   HERO
+============================================================ */
+.rt-hero {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+.rt-hero__bg {
+  position: absolute;
+  inset: -10% 0 -10% 0;
+  z-index: -2;
+  background: url('ritualehero2.png') center / cover no-repeat;
+  will-change: transform;
+}
+.rt-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(7,6,0,0.35) 0%, rgba(7,6,0,0.72) 55%, rgba(7,6,0,0.92) 100%);
+}
+.rt-hero__inner {
+  width: min(92%, 1100px);
+  text-align: center;
+  padding: 120px 0 80px;
+}
+.rt-hero__eyebrow {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--secondary-beige);
+  margin-bottom: 28px;
+  opacity: 0;
+  transition: opacity 0.9s var(--ease) 0.05s;
+}
+.rt-page.is-loaded .rt-hero__eyebrow { opacity: 1; }
+
+.rt-hero__title {
+  font-size: clamp(52px, 9vw, 108px);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  color: #fff;
+  text-shadow: 0 2px 48px rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: translateX(-36px);
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s,
+              transform 1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+}
+.rt-page.is-loaded .rt-hero__title { opacity: 1; transform: none; }
+
+.rt-hero__sub {
+  margin-top: 0.6em;
+  font-size: clamp(17px, 2.2vw, 24px);
+  font-weight: 300;
+  font-style: normal;
+  color: rgba(255,255,255,0.72);
+  letter-spacing: 0.01em;
+  opacity: 0;
+  transform: translateX(-36px);
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1) 0.35s,
+              transform 1s cubic-bezier(0.22, 1, 0.36, 1) 0.35s;
+}
+.rt-page.is-loaded .rt-hero__sub { opacity: 1; transform: none; }
+
+/* scroll hint */
+.rt-hero__scroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.8s var(--ease) 1.2s;
+}
+.rt-page.is-loaded .rt-hero__scroll { opacity: 1; }
+.rt-hero__scroll-line {
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0));
+  animation: rtScrollHint 2.4s var(--ease) infinite;
+}
+.rt-hero__scroll-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+@keyframes rtScrollHint {
+  0%   { transform: scaleY(0.2); transform-origin: top;    opacity: 0.2; }
+  50%  { transform: scaleY(1);   transform-origin: top;    opacity: 1;   }
+  51%  { transform-origin: bottom; }
+  100% { transform: scaleY(0.2); transform-origin: bottom; opacity: 0.2; }
+}
+
+/* ============================================================
+   INTRO — statement testuale
+============================================================ */
+.rt-intro {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 110px 48px;
+  text-align: center;
+}
+.rt-intro__text {
+  font-size: clamp(24px, 3.8vw, 44px);
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.42;
+  color: var(--primary-dark);
+  letter-spacing: -0.01em;
+}
+.rt-intro__text em {
+  font-style: normal;
+  color: var(--secondary-beige);
+}
+/* Parole-chiave che entrano una dopo l'altra — stile "prodotti" della home */
+.rt-keywords .rt-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 2.7s ease-out, transform 2.7s ease-out;
+}
+.rt-keywords .rt-word.is-visible { opacity: 1; transform: none; }
+.rt-keywords .rt-word:nth-child(1) { transition-delay: 0.1s; }
+.rt-keywords .rt-word:nth-child(2) { transition-delay: 0.45s; }
+.rt-keywords .rt-word:nth-child(3) { transition-delay: 0.8s; }
+
+/* ============================================================
+   METHODS — due blocchi step + immagine
+============================================================ */
+.rt-methods {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.rt-method {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+/* foto e testo entrano separati: prima la foto, poi il testo 1s dopo */
+.rt-method__img,
+.rt-method__content {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.rt-method.is-visible .rt-method__img {
+  opacity: 1;
+  transform: none;
+}
+.rt-method.is-visible .rt-method__content {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.65s;
+}
+
+/* block invertito: immagine a sx, testo a dx */
+.rt-method--rev .rt-method__img  { order: -1; }
+
+.rt-method__content { display: flex; flex-direction: column; gap: 36px; }
+
+.rt-method__head { display: flex; flex-direction: column; gap: 12px; }
+
+.rt-method__eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--secondary-beige);
+}
+.rt-method__title {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+  color: var(--primary-dark);
+}
+
+.rt-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.rt-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.rt-step__n {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(168,151,126,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--secondary-beige);
+  letter-spacing: 0.04em;
+  margin-top: 1px;
+}
+.rt-step__body { display: flex; flex-direction: column; gap: 6px; }
+.rt-step__name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.rt-step__desc {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+.rt-method__img {
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: rgba(71,55,40,0.06);
+}
+.rt-method__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s var(--ease);
+}
+.rt-method__img:hover img { transform: scale(1.035); }
+
+/* ============================================================
+   CTA FINALE
+============================================================ */
+.rt-final {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 48px;
+  text-align: center;
+  background-image:
+    linear-gradient(180deg, rgba(7,6,0,0.42) 0%, rgba(7,6,0,0.74) 100%),
+    url('ctarituale.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.rt-final__inner {
+  position: relative;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.rt-final__lede {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--secondary-beige);
+  margin-bottom: 22px;
+}
+.rt-final__title {
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-shadow: 0 2px 48px rgba(0,0,0,0.4);
+  margin-bottom: 48px;
+  line-height: 1.1;
+}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media (max-width: 900px) {
+  .rt-method {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .rt-method--rev .rt-method__img { order: 0; }
+  .rt-methods { gap: 80px; padding-bottom: 100px; }
+  .rt-final { aspect-ratio: 3 / 2; min-height: 420px; }
+}
+
+@media (max-width: 768px) {
+  .rt-intro   { padding: 80px 24px; }
+  .rt-methods { padding: 0 24px 80px; }
+  .rt-final   { aspect-ratio: 4 / 5; min-height: 480px; padding: 80px 24px; }
+
+  /* Mobile: il blocco è sempre visibile, entrano i singoli elementi
+     (head, step, immagine) man mano che li scrolli a schermo. */
+  .rt-method { opacity: 1; transform: none; transition: none; }
+  .rt-method__img,
+  .rt-method__content { opacity: 1; transform: none; transition: none; }
+  .rt-m-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 2.7s ease-out, transform 2.7s ease-out;
+  }
+  .rt-m-reveal.is-visible { opacity: 1; transform: none; }
+}
+
+@media (max-width: 480px) {
+  .rt-hero__bg { background-attachment: initial; }
+  .rt-intro__text { font-size: clamp(20px, 5.5vw, 28px); }
+}
