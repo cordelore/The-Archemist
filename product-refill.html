@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refill &mdash; THE ARCHEMIST</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="product-refill.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav__left">
+      <button class="nav__burger" id="navBurger" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="nav__logo">The Archemist</a>
+    </div>
+    <ul class="nav__links">
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Visione
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="manifesto.html">Manifesto</a></li>
+          <li><a href="valori.html">Valori</a></li>
+        </ul>
+      </li>
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Essenze
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="animapura.html">Animapura</a></li>
+          <li><a href="esperide.html">Esperide</a></li>
+          <li><a href="noor.html">Noor</a></li>
+          <li><a href="kiyomi.html">Kiyomi</a></li>
+          <li><a href="nayeli.html">Nayeli</a></li>
+          <li><a href="joy.html">Joy</a></li>
+          <li><a href="aurum.html">Aurum</a></li>
+        </ul>
+      </li>
+      <li class="nav__item"><a href="rituale.html">Il Rituale</a></li>
+    </ul>
+    <button class="nav__cta" onclick="location.href='prodotti.html'">
+      <span>Diventa alchimista</span>
+    </button>
+  </nav>
+
+  <div class="nav__mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul class="nav__mobile-menu__links">
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Visione
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="manifesto.html">Manifesto</a></li>
+          <li><a href="valori.html">Valori</a></li>
+        </ul>
+      </li>
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Essenze
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="animapura.html">Animapura</a></li>
+          <li><a href="esperide.html">Esperide</a></li>
+          <li><a href="noor.html">Noor</a></li>
+          <li><a href="kiyomi.html">Kiyomi</a></li>
+          <li><a href="nayeli.html">Nayeli</a></li>
+          <li><a href="joy.html">Joy</a></li>
+          <li><a href="aurum.html">Aurum</a></li>
+        </ul>
+      </li>
+      <li class="nav__item"><a href="rituale.html">Il Rituale</a></li>
+    </ul>
+  </div>
+
+  <!-- ============================================================
+       PRODUCT
+  ============================================================ -->
+  <main>
+    <section class="product-page">
+      <div class="product-layout">
+
+        <!-- Galleria -->
+        <div class="pgallery">
+          <div class="pgallery__wrap">
+            <img class="pgallery__main" id="pgalleryMain"
+                 src="./assets/hero-spray.jpg"
+                 alt="THE ARCHEMIST &mdash; Refill 35&thinsp;ml">
+          </div>
+          <div class="pgallery__thumbs">
+            <img class="pgallery__thumb is-active"
+                 src="./assets/hero-spray.jpg"
+                 data-src="./assets/hero-spray.jpg"
+                 alt="Refill &mdash; vista 1">
+            <img class="pgallery__thumb"
+                 src="./assets/rituale-pour.jpg"
+                 data-src="./assets/rituale-pour.jpg"
+                 alt="Refill &mdash; vista 2">
+            <img class="pgallery__thumb"
+                 src="./assets/rituale1.png"
+                 data-src="./assets/rituale1.png"
+                 alt="Refill &mdash; vista 3">
+          </div>
+        </div>
+
+        <!-- Info prodotto -->
+        <div class="pinfo">
+          <p class="pinfo__breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="pinfo__breadcrumb-sep">/</span>
+            <a href="index.html#prodotti">Prodotti</a>
+            <span class="pinfo__breadcrumb-sep">/</span>
+            Refill
+          </p>
+
+          <span class="pinfo__badge">Prodotto brevettato</span>
+
+          <h1 class="pinfo__title">Refill</h1>
+          <p class="pinfo__subtitle">Fiala concentrata &middot; 35&thinsp;ml</p>
+
+          <p class="pinfo__price">19,90&thinsp;&euro;</p>
+
+          <p class="pscent-label">Essenza</p>
+          <div class="pscents" id="pscents">
+            <button class="pscent is-selected" style="--frag-col:#00A3CC" data-name="Animapura" aria-label="Animapura"></button>
+            <button class="pscent" style="--frag-col:#F28B2D" data-name="Esperide" aria-label="Esperide"></button>
+            <button class="pscent" style="--frag-col:#E62D39" data-name="Noor" aria-label="Noor"></button>
+            <button class="pscent" style="--frag-col:#84C6A0" data-name="Kiyomi" aria-label="Kiyomi"></button>
+            <button class="pscent" style="--frag-col:#A7A2C2" data-name="Nayeli" aria-label="Nayeli"></button>
+            <button class="pscent" style="--frag-col:#E35499" data-name="Joy" aria-label="Joy"></button>
+            <button class="pscent" style="--frag-col:#C5AB00" data-name="Aurum" aria-label="Aurum"></button>
+          </div>
+          <p class="pscent-name" id="pscentName">Animapura</p>
+
+          <div class="pinfo__divider"></div>
+
+          <div class="pactions">
+            <div class="pqty">
+              <button class="pqty__btn" id="pqtyMinus" aria-label="Diminuisci quantit&agrave;">&#x2212;</button>
+              <input class="pqty__val" id="pqtyVal" type="number" value="1" min="1" max="99" readonly>
+              <button class="pqty__btn" id="pqtyPlus" aria-label="Aumenta quantit&agrave;">&#x2b;</button>
+            </div>
+            <button class="pcta" type="button">Aggiungi al carrello</button>
+          </div>
+
+          <ul class="pperks">
+            <li class="pperk">Resa su 250&thinsp;ml</li>
+            <li class="pperk">Ricaricabile</li>
+            <li class="pperk">&minus;80% packaging</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           TAB SECTION
+      ============================================================ -->
+      <div class="product-tabs">
+        <nav class="ptabs-nav" role="tablist" aria-label="Informazioni prodotto">
+          <span class="ptabs-slider" id="ptabsSlider" aria-hidden="true"></span>
+          <button class="ptab is-active" role="tab" data-panel="descrizione"
+                  aria-selected="true"  aria-controls="ppanel-descrizione">Descrizione</button>
+          <button class="ptab" role="tab" data-panel="uso"
+                  aria-selected="false" aria-controls="ppanel-uso">Come usare</button>
+          <button class="ptab" role="tab" data-panel="sicurezza"
+                  aria-selected="false" aria-controls="ppanel-sicurezza">Sicurezza</button>
+          <button class="ptab" role="tab" data-panel="spedizioni"
+                  aria-selected="false" aria-controls="ppanel-spedizioni">Spedizioni</button>
+        </nav>
+
+        <!-- Descrizione -->
+        <div class="ppanel is-active" id="ppanel-descrizione" data-panel="descrizione" role="tabpanel">
+          <p>Una fiala concentrata da 35&thinsp;ml di composto profumante pronto a essere diluito in acqua. Ideale per ricaricare o trasformare qualsiasi contenitore in un diffusore elegante e personalizzato.</p>
+
+          <h3>Il formato intelligente</h3>
+          <p>Con soli 35&thinsp;ml di fragranza concentrata, THE ARCHEMIST offre la possibilit&agrave; di creare fino a 250&thinsp;ml di profumatore ambiente diluito, con la massima resa e una qualit&agrave; olfattiva senza compromessi. Un prodotto estremamente efficiente e una scelta consapevole: riduce drasticamente sprechi e uso di materiali.</p>
+
+          <h3>Ricarica intelligente dei kit</h3>
+          <p>La fiala refill &egrave; il cuore ricaricabile dei kit spray e bastoncini THE ARCHEMIST. Una volta terminati, basta aggiungere la fragranza dal refill per continuare a godere di un&rsquo;esperienza olfattiva raffinata senza acquistare nuovi contenitori.</p>
+
+          <h3>Compatibilit&agrave; universale</h3>
+          <p>Grazie alla formula concentrata e alla facilit&agrave; di diluizione, la fiala refill pu&ograve; essere utilizzata non solo nei kit THE ARCHEMIST, ma anche in contenitori gi&agrave; in tuo possesso &mdash; una raffinata bottiglia in vetro o uno spray vintage dal charme senza tempo.</p>
+
+          <h3>Personalizzazione della fragranza</h3>
+          <p>La diluizione standard consente di preparare 250&thinsp;ml, ma l&rsquo;intensit&agrave; &egrave; regolabile: pi&ugrave; o meno acqua in base alla forza olfattiva desiderata, per ambienti sempre su misura.</p>
+
+          <h3>Spray portatile integrato</h3>
+          <p>La fiala presenta una linea guida sul fondo, studiata per trattenere la quantit&agrave; ideale di fragranza concentrata e trasformarla in un diffusore spray portatile &mdash; semplicemente aggiungendo acqua. Lusso, praticit&agrave; e portabilit&agrave; in un unico oggetto di design.</p>
+        </div>
+
+        <!-- Come usare -->
+        <div class="ppanel" id="ppanel-uso" data-panel="uso" role="tabpanel">
+          <ol class="psteps">
+            <li class="pstep">
+              <p>Versa il contenuto della fiala in 215&thinsp;ml di acqua distillata o demineralizzata all&rsquo;interno del tuo contenitore.</p>
+            </li>
+            <li class="pstep">
+              <p>Agita delicatamente fino a completa emulsione del concentrato con l&rsquo;acqua.</p>
+            </li>
+            <li class="pstep">
+              <p>Diffondi nello spazio con il tuo diffusore preferito: spray, bastoncini o qualsiasi sistema di nebulizzazione.</p>
+            </li>
+            <li class="pstep">
+              <p>Regola la concentrazione in base alle preferenze. Pi&ugrave; acqua per una fragranza pi&ugrave; delicata, meno acqua per un effetto pi&ugrave; intenso e avvolgente.</p>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Sicurezza -->
+        <div class="ppanel" id="ppanel-sicurezza" data-panel="sicurezza" role="tabpanel">
+          <p>Leggere attentamente le seguenti indicazioni prima dell&rsquo;uso.</p>
+          <ul class="psafety">
+            <li>Prodotto per uso esclusivamente ambientale. Non ingerire.</li>
+            <li>Tenere fuori dalla portata dei bambini e degli animali domestici.</li>
+            <li>Evitare il contatto con occhi e mucose. In caso di contatto, sciacquare abbondantemente con acqua e consultare un medico se il disturbo persiste.</li>
+            <li>In caso di ingestione accidentale, contattare immediatamente il centro antiveleni.</li>
+            <li>Conservare in luogo fresco, asciutto e al riparo dalla luce solare diretta. Temperatura raccomandata: 5&ndash;30&thinsp;&deg;C.</li>
+            <li>Non esporre a fonti di calore, fiamme libere o materiali infiammabili.</li>
+            <li>Smaltire il flacone vuoto secondo le normative locali per i materiali plastici (codice riciclo 5 &ndash; PP).</li>
+          </ul>
+        </div>
+
+        <!-- Spedizioni -->
+        <div class="ppanel" id="ppanel-spedizioni" data-panel="spedizioni" role="tabpanel">
+          <div class="pship-grid">
+            <div class="pship-card">
+              <p class="pship-card__title">Standard</p>
+              <p class="pship-card__time">3&ndash;5 giorni lavorativi</p>
+              <p class="pship-card__price">4,90&thinsp;&euro;</p>
+            </div>
+            <div class="pship-card">
+              <p class="pship-card__title">Express</p>
+              <p class="pship-card__time">1&ndash;2 giorni lavorativi</p>
+              <p class="pship-card__price">9,90&thinsp;&euro;</p>
+            </div>
+          </div>
+          <p class="pship-note">Spedizione gratuita per ordini superiori a 49&thinsp;&euro;. Consegna in tutta Italia; spedizioni verso l&rsquo;Unione Europea disponibili &mdash; verificare le tariffe al momento del checkout. Reso gratuito entro 30 giorni dalla ricezione del prodotto integro.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" id="footer">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__logo">The Archemist</p>
+        <p class="footer__tagline">The Archemist &egrave; una rivoluzione gentile.<br>Alchimia italiana, impatto minimo.</p>
+        <a href="prodotti.html" class="btn btn--light"><span>Diventa Alchimista</span></a>
+      </div>
+      <div>
+        <p class="footer__col-t">Navigazione</p>
+        <ul class="footer__ul">
+          <li><a href="index.html#manifesto">La visione</a></li>
+          <li><a href="index.html#essenze">Le essenze</a></li>
+          <li><a href="index.html#prodotti">I prodotti</a></li>
+          <li><a href="index.html#rituale">Come funziona</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-t">Legale</p>
+        <ul class="footer__ul">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-t">Resta aggiornato</p>
+        <p style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.42);line-height:1.75;margin-bottom:18px;">Nuove essenze e contenuti esclusivi. Niente spam, solo alchimia.</p>
+        <div class="footer__form">
+          <input type="email" class="footer__input" placeholder="La tua email">
+          <button class="footer__send" type="button">Iscriviti</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">&copy; 2026 The Archemist. Tutti i diritti riservati.</span>
+      <span class="footer__copy">Made in Italy</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="product-refill.js"></script>
+</body>
+</html>

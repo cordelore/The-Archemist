@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIYOMI &mdash; THE ARCHEMIST</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fragrance.css">
+</head>
+<body style="--accent: #84C6A0;">
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav__left">
+      <button class="nav__burger" id="navBurger" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="nav__logo">The Archemist</a>
+    </div>
+    <ul class="nav__links">
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Visione
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="manifesto.html">Manifesto</a></li>
+          <li><a href="valori.html">Valori</a></li>
+        </ul>
+      </li>
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Essenze
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="animapura.html">Animapura</a></li>
+          <li><a href="esperide.html">Esperide</a></li>
+          <li><a href="noor.html">Noor</a></li>
+          <li><a href="kiyomi.html">Kiyomi</a></li>
+          <li><a href="nayeli.html">Nayeli</a></li>
+          <li><a href="joy.html">Joy</a></li>
+          <li><a href="aurum.html">Aurum</a></li>
+        </ul>
+      </li>
+      <li class="nav__item"><a href="rituale.html">Il Rituale</a></li>
+    </ul>
+    <button class="nav__cta" onclick="location.href='prodotti.html'">
+      <span>Diventa alchimista</span>
+    </button>
+  </nav>
+
+  <div class="nav__mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul class="nav__mobile-menu__links">
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Visione
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="manifesto.html">Manifesto</a></li>
+          <li><a href="valori.html">Valori</a></li>
+        </ul>
+      </li>
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Essenze
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="animapura.html">Animapura</a></li>
+          <li><a href="esperide.html">Esperide</a></li>
+          <li><a href="noor.html">Noor</a></li>
+          <li><a href="kiyomi.html">Kiyomi</a></li>
+          <li><a href="nayeli.html">Nayeli</a></li>
+          <li><a href="joy.html">Joy</a></li>
+          <li><a href="aurum.html">Aurum</a></li>
+        </ul>
+      </li>
+      <li class="nav__item"><a href="rituale.html">Il Rituale</a></li>
+    </ul>
+  </div>
+
+  <!-- ============================================================
+       HERO — solo foto
+  ============================================================ -->
+  <section class="frag-hero">
+    <img class="frag-hero__img" src="./assets/kiyomi.png" alt="KIYOMI &mdash; Profumazione d'ambiente">
+  </section>
+
+  <!-- ============================================================
+       INTRO — h2 + paragrafo sotto la foto
+  ============================================================ -->
+  <section class="frag-intro">
+    <div class="frag-intro__inner">
+      <h2 class="frag-intro__title">Per un’atmosfera<br>rigenerante ed elegante</h2>
+      <p class="frag-intro__body frag-fade-left">KIYOMI è una fragranza d’ambiente fresca e luminosa, che unisce l’energia agrumata del lime e la delicatezza dei fiori d’arancio a un cuore verde e aromatico di eucalipto e magnolia. Il suo profumo trasmette un’eleganza naturale e un senso di rigenerazione, ideale per creare un’atmosfera vivace e raffinata, portando un tocco di natura fresca negli spazi.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       NOTE OLFATTIVE
+  ============================================================ -->
+  <section class="frag-notes">
+    <div class="frag-notes__header">
+      <h2 class="frag-notes__title">Le note olfattive</h2>
+      <p class="frag-notes__intro frag-fade-left">Una fragranza che si rivela nel tempo. Dall&rsquo;apertura luminosa al fondo avvolgente, ogni accordo segna un passaggio del viaggio olfattivo di KIYOMI &mdash; tre momenti che si svelano lentamente, uno dopo l&rsquo;altro.</p>
+    </div>
+
+    <div class="frag-notes__list">
+
+      <article class="frag-note frag-anim">
+        <span class="frag-note__num">01</span>
+        <div class="frag-note__body">
+          <span class="frag-note__label">Note di Testa</span>
+          <h3 class="frag-note__name">Lime · Fiori d’arancio</h3>
+          <p class="frag-note__desc">L’apertura è dominata dal lime, vibrante e vivace, accompagnato dalla dolce delicatezza dei fiori d’arancio, per un impatto olfattivo immediatamente fresco e brillante.</p>
+        </div>
+      </article>
+
+      <article class="frag-note frag-anim">
+        <span class="frag-note__num">02</span>
+        <div class="frag-note__body">
+          <span class="frag-note__label">Note di Cuore</span>
+          <h3 class="frag-note__name">Eucalipto · Magnolia</h3>
+          <p class="frag-note__desc">Il cuore vegetale e aromatico combina l’intensità dell’eucalipto con la dolcezza sfumata della magnolia, regalando sensazioni di vitalità e purezza.</p>
+        </div>
+      </article>
+
+      <article class="frag-note frag-anim">
+        <span class="frag-note__num">03</span>
+        <div class="frag-note__body">
+          <span class="frag-note__label">Note di Fondo</span>
+          <h3 class="frag-note__name">Muschio · Legno di cedro</h3>
+          <p class="frag-note__desc">La fragranza si chiude su una base calda e avvolgente, con morbide note di muschio e la solida eleganza del legno di cedro, per un’esperienza avvolgente e duratura.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA FINALE
+  ============================================================ -->
+  <section class="frag-final">
+    <div class="frag-final__inner">
+      <p class="frag-final__lede frag-fade-left">Adesso tocca a te.</p>
+      <h2 class="frag-final__title frag-anim">Scopri tutti i prodotti</h2>
+      <a href="prodotti.html" class="btn"><span>Esplora la collezione</span></a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" id="footer">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__logo">The Archemist</p>
+        <p class="footer__tagline">The Archemist &egrave; una rivoluzione gentile.<br>Alchimia italiana, impatto minimo.</p>
+        <a href="prodotti.html" class="btn btn--light"><span>Diventa Alchimista</span></a>
+      </div>
+      <div>
+        <p class="footer__col-t">Navigazione</p>
+        <ul class="footer__ul">
+          <li><a href="index.html#manifesto">La visione</a></li>
+          <li><a href="index.html#essenze">Le essenze</a></li>
+          <li><a href="index.html#prodotti">I prodotti</a></li>
+          <li><a href="index.html#rituale">Come funziona</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-t">Legale</p>
+        <ul class="footer__ul">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-t">Resta aggiornato</p>
+        <p style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.42);line-height:1.75;margin-bottom:18px;">Nuove essenze e contenuti esclusivi. Niente spam, solo alchimia.</p>
+        <div class="footer__form">
+          <input type="email" class="footer__input" placeholder="La tua email">
+          <button class="footer__send" type="button">Iscriviti</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">&copy; 2026 The Archemist. Tutti i diritti riservati.</span>
+      <span class="footer__copy">Made in Italy</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="fragrance.js"></script>
+
+</body>
+</html>

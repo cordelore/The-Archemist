@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kit Diffusore Spray &mdash; THE ARCHEMIST</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="product-refill-v2.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav__left">
+      <button class="nav__burger" id="navBurger" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="nav__logo">The Archemist</a>
+    </div>
+    <ul class="nav__links">
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Visione
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="manifesto.html">Manifesto</a></li>
+          <li><a href="valori.html">Valori</a></li>
+        </ul>
+      </li>
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Essenze
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="animapura.html">Animapura</a></li>
+          <li><a href="esperide.html">Esperide</a></li>
+          <li><a href="noor.html">Noor</a></li>
+          <li><a href="kiyomi.html">Kiyomi</a></li>
+          <li><a href="nayeli.html">Nayeli</a></li>
+          <li><a href="joy.html">Joy</a></li>
+          <li><a href="aurum.html">Aurum</a></li>
+        </ul>
+      </li>
+      <li class="nav__item"><a href="rituale.html">Il Rituale</a></li>
+    </ul>
+    <button class="nav__cta" onclick="location.href='prodotti.html'">
+      <span>Diventa alchimista</span>
+    </button>
+  </nav>
+
+  <div class="nav__mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul class="nav__mobile-menu__links">
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Visione
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="manifesto.html">Manifesto</a></li>
+          <li><a href="valori.html">Valori</a></li>
+        </ul>
+      </li>
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Essenze
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="animapura.html">Animapura</a></li>
+          <li><a href="esperide.html">Esperide</a></li>
+          <li><a href="noor.html">Noor</a></li>
+          <li><a href="kiyomi.html">Kiyomi</a></li>
+          <li><a href="nayeli.html">Nayeli</a></li>
+          <li><a href="joy.html">Joy</a></li>
+          <li><a href="aurum.html">Aurum</a></li>
+        </ul>
+      </li>
+      <li class="nav__item"><a href="rituale.html">Il Rituale</a></li>
+    </ul>
+  </div>
+
+  <!-- ============================================================
+       PRODUCT
+  ============================================================ -->
+  <main>
+    <section class="product-page">
+      <div class="product-layout">
+
+        <!-- Galleria -->
+        <div class="pgallery">
+          <div class="pgallery__wrap">
+            <img class="pgallery__main" id="pgalleryMain"
+                 src="./assets/archemist-19-animapura.jpg"
+                 alt="THE ARCHEMIST &mdash; Kit Diffusore Spray">
+          </div>
+          <div class="pgallery__thumbs">
+            <img class="pgallery__thumb is-active"
+                 src="./assets/archemist-19-animapura.jpg"
+                 data-src="./assets/archemist-19-animapura.jpg"
+                 alt="Kit Diffusore Spray &mdash; vista 1">
+            <img class="pgallery__thumb"
+                 src="./assets/archemist-03.jpg"
+                 data-src="./assets/archemist-03.jpg"
+                 alt="Kit Diffusore Spray &mdash; contenuto del set">
+            <img class="pgallery__thumb"
+                 src="./assets/etichettadisicurezza.png"
+                 data-src="./assets/etichettadisicurezza.png"
+                 alt="Kit Diffusore Spray &mdash; etichetta di sicurezza">
+          </div>
+        </div>
+
+        <!-- Info prodotto -->
+        <div class="pinfo">
+          <p class="pinfo__breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="pinfo__breadcrumb-sep">/</span>
+            <a href="prodotti.html">Prodotti</a>
+            <span class="pinfo__breadcrumb-sep">/</span>
+            Kit Diffusore Spray
+          </p>
+
+          <span class="pinfo__badge">Prodotto brevettato</span>
+
+          <h1 class="pinfo__title">Kit Diffusore Spray</h1>
+          <p class="pinfo__subtitle">Freschezza su richiesta &middot; ~200&ndash;250 spruzzi</p>
+
+          <p class="pinfo__price">49,90&thinsp;&euro;</p>
+
+          <p class="pscent-label">Essenza</p>
+          <div class="pscents" id="pscents">
+            <button class="pscent is-selected" style="--frag-col:#00A3CC" data-name="Animapura" data-img="./assets/archemist-19-animapura.jpg" aria-label="Animapura"></button>
+            <button class="pscent" style="--frag-col:#F28B2D" data-name="Esperide" data-img="./assets/archemist-16-esperide.jpg" aria-label="Esperide"></button>
+            <button class="pscent" style="--frag-col:#E62D39" data-name="Noor" data-img="./assets/archemist-15-noor.jpg" aria-label="Noor"></button>
+            <button class="pscent" style="--frag-col:#84C6A0" data-name="Kiyomi" data-img="./assets/archemist-21-kiyomi.jpg" aria-label="Kiyomi"></button>
+            <button class="pscent" style="--frag-col:#A7A2C2" data-name="Nayeli" data-img="./assets/archemist-18-nayeli.jpg" aria-label="Nayeli"></button>
+            <button class="pscent" style="--frag-col:#E35499" data-name="Joy" data-img="./assets/archemist-20-joy.jpg" aria-label="Joy"></button>
+            <button class="pscent" style="--frag-col:#C5AB00" data-name="Aurum" data-img="./assets/archemist-17-aurum.jpg" aria-label="Aurum"></button>
+          </div>
+          <p class="pscent-name" id="pscentName">Animapura</p>
+
+          <div class="pinfo__divider"></div>
+
+          <div class="pactions">
+            <div class="pqty">
+              <button class="pqty__btn" id="pqtyMinus" aria-label="Diminuisci quantit&agrave;">&#x2212;</button>
+              <input class="pqty__val" id="pqtyVal" type="number" value="1" min="1" max="99" readonly>
+              <button class="pqty__btn" id="pqtyPlus" aria-label="Aumenta quantit&agrave;">&#x2b;</button>
+            </div>
+            <button class="pcta" type="button">Aggiungi al carrello</button>
+          </div>
+
+          <ul class="pperks">
+            <li class="pperk">Fiala refill 35&thinsp;ml</li>
+            <li class="pperk">Pompa con collare in legno</li>
+            <li class="pperk">Spray portatile incluso</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           TAB SECTION
+      ============================================================ -->
+      <div class="product-tabs">
+        <nav class="ptabs-nav" role="tablist" aria-label="Informazioni prodotto">
+          <span class="ptabs-slider" id="ptabsSlider" aria-hidden="true"></span>
+          <button class="ptab is-active" role="tab" data-panel="descrizione"
+                  aria-selected="true"  aria-controls="ppanel-descrizione">Descrizione</button>
+          <button class="ptab" role="tab" data-panel="uso"
+                  aria-selected="false" aria-controls="ppanel-uso">Come usare</button>
+          <button class="ptab" role="tab" data-panel="sicurezza"
+                  aria-selected="false" aria-controls="ppanel-sicurezza">Sicurezza</button>
+        </nav>
+
+        <!-- Descrizione -->
+        <div class="ppanel is-active" id="ppanel-descrizione" data-panel="descrizione" role="tabpanel">
+          <p data-reveal>Piacere immediato. Controllo assoluto. Nella profumazione d&rsquo;ambiente l&rsquo;immediatezza non deve compromettere l&rsquo;eleganza e la praticit&agrave; non deve rinunciare alla qualit&agrave;. Il Kit Diffusore Spray THE ARCHEMIST &egrave; essenza pura che si attiva quando vuoi: fragranza concentrata che diffonde al momento giusto, design italiano che unisce gesto e bellezza.</p>
+
+          <h3 data-reveal>Contenuto del kit</h3>
+          <ul class="psafety" data-reveal>
+            <li>1 fiala refill THE ARCHEMIST da 35&thinsp;ml</li>
+            <li>1 elegante bottiglia in vetro</li>
+            <li>1 pompa spray con collare in legno</li>
+            <li>1 pompetta spray</li>
+          </ul>
+
+          <h3 data-reveal>Freschezza su richiesta</h3>
+          <p data-reveal>Avvita la pompa spray con collare in legno, agita leggermente e spruzza nello spazio: la fragranza si diffonde immediatamente e avvolge l&rsquo;ambiente con intensit&agrave; controllata. Circa 200&ndash;250 spruzzi per ogni preparazione. Tu decidi quando, tu decidi quanto.</p>
+
+          <h3 data-reveal>Spray portatile integrato</h3>
+          <p data-reveal>Nella fiala restano circa 4&thinsp;ml di concentrato: non sono uno scarto. Riempi con acqua, avvita la pompetta spray e ottieni un diffusore portatile da 35&thinsp;ml che ti segue ovunque &mdash; in viaggio, in auto, in ufficio. Un gesto, due prodotti. Intelligenza che non spreca.</p>
+        </div>
+
+        <!-- Come usare -->
+        <div class="ppanel" id="ppanel-uso" data-panel="uso" role="tabpanel">
+          <ol class="psteps">
+            <li class="pstep">
+              <p><strong>Prepara.</strong> Riempi la bottiglia fino a &frac34; con acqua del rubinetto o minerale per un risultato ottimale.</p>
+            </li>
+            <li class="pstep">
+              <p><strong>Versa.</strong> Apri la fiala: alla base trovi una tacca, il punto esatto dove fermarti. Versa il concentrato fino a quel segno, aggiungi acqua fino al livello desiderato e agita. I 4&thinsp;ml che restano sono per il tuo spray portatile. Eventuale schiuma &egrave; normale e temporanea.</p>
+            </li>
+            <li class="pstep">
+              <p><strong>Diffondi.</strong> Avvita la pompa spray con collare in legno. Agita leggermente prima di ogni utilizzo e spruzza nello spazio o sui tessuti, evitando superfici e materiali delicati. ~200&ndash;250 spruzzi per preparazione.</p>
+            </li>
+            <li class="pstep">
+              <p><strong>Trasforma.</strong> Riempi la fiala rimasta con acqua fino all&rsquo;orlo, avvita la pompetta spray e attendi che il composto si diluisca. Ora hai il tuo diffusore portatile da 35&thinsp;ml.</p>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Sicurezza -->
+        <div class="ppanel" id="ppanel-sicurezza" data-panel="sicurezza" role="tabpanel">
+          <div class="psafety-label">
+            <p class="psafety-label__code">DEO 34050 NOOR</p>
+            <p class="psafety-label__ufi">UFI: 6800-G0EW-700J-N3G6</p>
+            <p>Pu&ograve; provocare una reazione allergica cutanea. Nocivo per gli organismi acquatici con effetti di lunga durata. In caso di consultazione di un medico, tenere a disposizione il contenitore o l&rsquo;etichetta del prodotto. Tenere fuori dalla portata dei bambini. Non disperdere nell&rsquo;ambiente. Indossare guanti/indumenti protettivi/proteggere gli occhi/proteggere il viso.</p>
+            <p>IN CASO DI CONTATTO CON LA PELLE: Lavare abbondantemente con acqua. In caso di irritazione o eruzione della pelle, consultare un medico. Smaltire il prodotto/recipiente in un punto di raccolta autorizzato.</p>
+            <p><strong>Contiene:</strong> Citrus Aurantium Dulcis Peel Oil; Eugenol; Benzyl salicylate; Pogostemon Cablin Leaf Oil; Linalool; Acetylcedrene; Geraniol; Linalyl acetate; Nerol; Coumarin; Isoeugenol.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" id="footer">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__logo">The Archemist</p>
+        <p class="footer__tagline">The Archemist &egrave; una rivoluzione gentile.<br>Alchimia italiana, impatto minimo.</p>
+        <a href="prodotti.html" class="btn btn--light"><span>Diventa Alchimista</span></a>
+      </div>
+      <div>
+        <p class="footer__col-t">Navigazione</p>
+        <ul class="footer__ul">
+          <li><a href="index.html#manifesto">La visione</a></li>
+          <li><a href="index.html#essenze">Le essenze</a></li>
+          <li><a href="index.html#prodotti">I prodotti</a></li>
+          <li><a href="index.html#rituale">Come funziona</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-t">Legale</p>
+        <ul class="footer__ul">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-t">Resta aggiornato</p>
+        <p style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.42);line-height:1.75;margin-bottom:18px;">Nuove essenze e contenuti esclusivi. Niente spam, solo alchimia.</p>
+        <div class="footer__form">
+          <input type="email" class="footer__input" placeholder="La tua email">
+          <button class="footer__send" type="button">Iscriviti</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">&copy; 2026 The Archemist. Tutti i diritti riservati.</span>
+      <span class="footer__copy">Made in Italy</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="product-refill.js"></script>
+  <script src="reveal.js"></script>
+</body>
+</html>

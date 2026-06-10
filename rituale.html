@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il Rituale — THE ARCHEMIST</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="rituale.css">
+</head>
+<body class="rt-page">
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav__left">
+      <button class="nav__burger" id="navBurger" aria-label="Apri menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="nav__logo">The Archemist</a>
+    </div>
+    <ul class="nav__links">
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Visione
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="manifesto.html">Manifesto</a></li>
+          <li><a href="valori.html">Valori</a></li>
+        </ul>
+      </li>
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Essenze
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="animapura.html">Animapura</a></li>
+          <li><a href="esperide.html">Esperide</a></li>
+          <li><a href="noor.html">Noor</a></li>
+          <li><a href="kiyomi.html">Kiyomi</a></li>
+          <li><a href="nayeli.html">Nayeli</a></li>
+          <li><a href="joy.html">Joy</a></li>
+          <li><a href="aurum.html">Aurum</a></li>
+        </ul>
+      </li>
+      <li class="nav__item"><a href="rituale.html">Il Rituale</a></li>
+    </ul>
+    <button class="nav__cta" onclick="location.href='prodotti.html'">
+      <span>Diventa alchimista</span>
+    </button>
+  </nav>
+
+  <div class="nav__mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul class="nav__mobile-menu__links">
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Visione
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="manifesto.html">Manifesto</a></li>
+          <li><a href="valori.html">Valori</a></li>
+        </ul>
+      </li>
+      <li class="nav__item nav__item--has-sub">
+        <button type="button" class="nav__sub-toggle" aria-haspopup="true" aria-expanded="false">
+          Essenze
+          <svg class="nav__sub-caret" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav__sub">
+          <li><a href="animapura.html">Animapura</a></li>
+          <li><a href="esperide.html">Esperide</a></li>
+          <li><a href="noor.html">Noor</a></li>
+          <li><a href="kiyomi.html">Kiyomi</a></li>
+          <li><a href="nayeli.html">Nayeli</a></li>
+          <li><a href="joy.html">Joy</a></li>
+          <li><a href="aurum.html">Aurum</a></li>
+        </ul>
+      </li>
+      <li class="nav__item"><a href="rituale.html">Il Rituale</a></li>
+    </ul>
+  </div>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="rt-hero">
+    <div class="rt-hero__bg"></div>
+    <div class="rt-hero__overlay"></div>
+    <div class="rt-hero__inner">
+      <span class="rt-hero__eyebrow">Come funziona</span>
+      <h1 class="rt-hero__title">Il Rituale</h1>
+      <p class="rt-hero__sub">Quattro gesti. Un'unica essenza.</p>
+    </div>
+    <div class="rt-hero__scroll">
+      <div class="rt-hero__scroll-line"></div>
+      <span class="rt-hero__scroll-label">Scopri</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INTRO — statement
+  ============================================================ -->
+  <section class="rt-intro">
+    <p class="rt-intro__text">
+      Non è solo profumo.<br>
+      È un atto consapevole: <em class="rt-keywords"><span class="rt-word">diluire,</span> <span class="rt-word">trasformare,</span> <span class="rt-word">diffondere.</span></em><br>
+      Ogni fiala è un punto di partenza — tu sei l'alchimista.
+    </p>
+  </section>
+
+  <!-- ============================================================
+       STEPS — due blocchi reference-style
+  ============================================================ -->
+  <div class="rt-methods">
+
+    <!-- BLOCK 1: Prepara & Versa — immagine sx, testo dx -->
+    <article class="rt-method rt-method--rev">
+      <div class="rt-method__content">
+        <div class="rt-method__head">
+          <span class="rt-method__eyebrow">Il rituale · 01 — 02</span>
+          <h2 class="rt-method__title">Prepara<br>&amp; Versa</h2>
+        </div>
+        <ul class="rt-steps">
+          <li class="rt-step">
+            <span class="rt-step__n">01</span>
+            <div class="rt-step__body">
+              <span class="rt-step__name">Prepara</span>
+              <p class="rt-step__desc">Versa 35 ml di concentrato nel contenitore in vetro. Aggiungi acqua fino alla tacca indicata per ottenere 250 ml di profumatore pronto all'uso.</p>
+            </div>
+          </li>
+          <li class="rt-step">
+            <span class="rt-step__n">02</span>
+            <div class="rt-step__body">
+              <span class="rt-step__name">Versa</span>
+              <p class="rt-step__desc">Miscela delicatamente. Lascia riposare qualche minuto: la chimica colloidale sta lavorando per distribuire ogni molecola aromatica in modo uniforme.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="rt-method__img">
+        <img src="./assets/rituale-pour.jpg" alt="Prepara — Step 1 del rituale The Archemist">
+      </div>
+    </article>
+
+    <!-- BLOCK 2: Diffondi & Trasforma — testo sx, immagine dx -->
+    <article class="rt-method">
+      <div class="rt-method__content">
+        <div class="rt-method__head">
+          <span class="rt-method__eyebrow">Il rituale · 03 — 04</span>
+          <h2 class="rt-method__title">Diffondi<br>&amp; Trasforma</h2>
+        </div>
+        <ul class="rt-steps">
+          <li class="rt-step">
+            <span class="rt-step__n">03</span>
+            <div class="rt-step__body">
+              <span class="rt-step__name">Diffondi</span>
+              <p class="rt-step__desc">Inserisci i bastoncini nel contenitore oppure usa il tappo spray per profumare direttamente l'ambiente. La fragranza si diffonde in modo omogeneo, senza picchi e senza spegnersi.</p>
+            </div>
+          </li>
+          <li class="rt-step">
+            <span class="rt-step__n">04</span>
+            <div class="rt-step__body">
+              <span class="rt-step__name">Trasforma</span>
+              <p class="rt-step__desc">I 4 ml rimasti nella fiala diventano uno spray portatile da 35 ml aggiungendo acqua. Zero sprechi — ogni goccia di essenza italiana trova la sua destinazione.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="rt-method__img">
+        <img src="./assets/hero-spray.jpg" alt="Diffondi — Step 3 del rituale The Archemist">
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ============================================================
+       CTA FINALE
+  ============================================================ -->
+  <section class="rt-final">
+    <div class="rt-final__inner">
+      <p class="rt-final__lede cta-reveal-left">Adesso tocca a te.</p>
+      <h2 class="rt-final__title cta-reveal">Scopri tutti i prodotti</h2>
+      <a href="prodotti.html" class="btn btn--light"><span>Esplora la collezione</span></a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" id="footer">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__logo">The Archemist</p>
+        <p class="footer__tagline">The Archemist è una rivoluzione gentile.<br>Alchimia italiana, impatto minimo.</p>
+        <a href="prodotti.html" class="btn btn--light"><span>Diventa Alchimista</span></a>
+      </div>
+      <div>
+        <p class="footer__col-t">Navigazione</p>
+        <ul class="footer__ul">
+          <li><a href="manifesto.html">Manifesto</a></li>
+          <li><a href="valori.html">Valori</a></li>
+          <li><a href="index.html#essenze">Le essenze</a></li>
+          <li><a href="index.html#prodotti">I prodotti</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-t">Legale</p>
+        <ul class="footer__ul">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-t">Resta aggiornato</p>
+        <p class="footer__newsletter-copy">Nuove essenze e contenuti esclusivi. Niente spam, solo alchimia.</p>
+        <div class="footer__form">
+          <input type="email" class="footer__input" placeholder="La tua email">
+          <button class="footer__send" type="button">Iscriviti</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2026 The Archemist. Tutti i diritti riservati.</span>
+      <span class="footer__copy">Made in Italy</span>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+  <script src="rituale.js" defer></script>
+</body>
+</html>
