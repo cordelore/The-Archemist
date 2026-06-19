@@ -27,16 +27,21 @@
    HERO (solo foto)
 ============================================================ */
 .frag-hero {
-  position: relative;
   width: 100%;
   padding-top: var(--nav-h);
+}
+
+.frag-hero__wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 160 / 81; /* 16:9 con altezza ridotta del 10% */
   overflow: hidden;
 }
 
 .frag-hero__img {
   display: block;
   width: 100%;
-  height: clamp(420px, 78vh, 760px);
+  height: 100%;
   object-fit: cover;
   object-position: center;
   transform-origin: center;
@@ -58,6 +63,38 @@
 
 @media (prefers-reduced-motion: reduce) {
   .frag-hero__img { animation: fragHeroIn 1s ease both; }
+}
+
+.frag-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.27);
+  pointer-events: none;
+}
+
+.frag-hero__name {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: clamp(2.8rem, 8vw, 7rem);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #fff;
+  pointer-events: none;
+  animation: nameFadeOut 3.5s ease both;
+}
+
+/* nome visibile subito, poi sparisce lentamente */
+@keyframes nameFadeOut {
+  0%, 60% { opacity: 1; }
+  100%    { opacity: 0; }
 }
 
 /* ============================================================
@@ -262,10 +299,14 @@
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.4em;
+  text-indent: 0.4em; /* compensa lo spazio finale del letter-spacing → testo davvero centrato */
   text-transform: uppercase;
   color: var(--accent, var(--secondary-beige));
   margin-bottom: 22px;
 }
+/* nella CTA il testo entra dal basso (non da sinistra) così resta centrato */
+.frag-final .frag-fade-left { transform: translateY(24px); }
+.frag-final .frag-fade-left.is-visible { transform: none; }
 .frag-final__title {
   font-size: clamp(36px, 6vw, 64px);
   font-weight: 600;
@@ -306,7 +347,7 @@
    RESPONSIVE
 ============================================================ */
 @media (max-width: 900px) {
-  .frag-hero__img { height: clamp(360px, 60vh, 560px); }
+  .frag-hero__wrap { aspect-ratio: 4 / 3; } /* più alta su tablet, ritaglio ai lati */
   .frag-intro { padding: 72px 48px 64px; }
   .frag-notes { padding: 96px 48px; }
   .frag-notes__list { padding-top: 80px; }
@@ -314,7 +355,13 @@
 }
 
 @media (max-width: 600px) {
-  .frag-hero__img { height: 56vh; min-height: 320px; }
+  .frag-hero__wrap { aspect-ratio: 1 / 1; } /* hero su telefono, meno ritaglio ai lati */
+  .frag-hero__name {
+    font-size: clamp(1.4rem, 7vw, 2.4rem);
+    letter-spacing: 0.14em;
+    padding: 0 18px;
+    text-align: center;
+  }
   .frag-final { aspect-ratio: 4 / 5; min-height: 500px; padding: 56px 24px; }
   .frag-intro { padding: 56px 24px 48px; }
   .frag-notes { padding: 80px 24px; }

@@ -139,6 +139,19 @@
         return;
       }
 
+      if (!window.matchMedia('(min-width: 769px)').matches) {
+        // Mobile: ogni card appare quando la scrolli a schermo
+        var obsM = new IntersectionObserver(function (entries, o) {
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            o.unobserve(e.target);
+            e.target.classList.add('is-visible');
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+        items.forEach(function (el) { obsM.observe(el); });
+        return;
+      }
+
       var obs = new IntersectionObserver(function (entries, o) {
         entries.forEach(function (e) {
           if (!e.isIntersecting) return;
@@ -195,19 +208,15 @@
       if (section) obs.observe(section);
     }());
 
-    // === Rituale scroll ===
+    // === Rituale: reveal sezione (tutti gli schermi) ===
     (function () {
-      if (!window.matchMedia('(min-width: 769px)').matches) return;
-
       var section = document.querySelector('.rituale');
       if (!section) return;
-      var sticky = section.querySelector('.rituale__sticky');
-      var imgs   = section.querySelectorAll('.rituale__img');
-      var dots   = section.querySelectorAll('.rituale__dot');
-      var N      = imgs.length;
-      var current = 0;
-      var lastWheel = 0;
-      var DEBOUNCE  = 650;
+
+      if (!('IntersectionObserver' in window)) {
+        section.classList.add('is-visible');
+        return;
+      }
 
       var observer = new IntersectionObserver(function(entries) {
         if (entries[0].isIntersecting) {
@@ -216,24 +225,39 @@
         }
       }, { threshold: 0.15 });
       observer.observe(section);
+    }());
 
-      function go(next, dir) {
-        var prev = current;
-        current = next;
-        if (dir > 0) {
-          imgs[prev].classList.remove('is-active');
-          imgs[prev].classList.add('is-above');
-          imgs[current].classList.remove('is-above');
-          imgs[current].classList.add('is-active');
-        } else {
-          imgs[prev].classList.remove('is-active');
-          imgs[current].classList.remove('is-above');
-          imgs[current].classList.add('is-active');
-        }
-        dots.forEach(function(el, i) { el.classList.toggle('is-active', i === current); });
+    // === Rituale carosello (desktop: wheel · mobile: swipe · dots su entrambi) ===
+    (function () {
+      var section = document.querySelector('.rituale');
+      if (!section) return;
+      var sticky = section.querySelector('.rituale__sticky');
+      var imgs   = section.querySelectorAll('.rituale__img');
+      var dots   = section.querySelectorAll('.rituale__dot');
+      var N      = imgs.length;
+      if (!sticky || !N) return;
+      var current = 0;
+
+      function setSlide(idx) {
+        idx = Math.max(0, Math.min(N - 1, idx));
+        current = idx;
+        imgs.forEach(function (el, i) {
+          el.classList.toggle('is-active', i === idx);
+          el.classList.toggle('is-above', i < idx);
+        });
+        dots.forEach(function (el, i) { el.classList.toggle('is-active', i === idx); });
       }
 
-      sticky.addEventListener('wheel', function(e) {
+      // Dots tappabili (mobile + desktop)
+      dots.forEach(function (dot, i) {
+        dot.style.cursor = 'pointer';
+        dot.addEventListener('click', function () { setSlide(i); });
+      });
+
+      // Desktop: avanzamento a rotella
+      var lastWheel = 0;
+      var DEBOUNCE  = 650;
+      sticky.addEventListener('wheel', function (e) {
         var dir = e.deltaY > 0 ? 1 : -1;
         if (dir < 0 && current === 0)     return;
         if (dir > 0 && current === N - 1) return;
@@ -241,16 +265,25 @@
         var now = Date.now();
         if (now - lastWheel < DEBOUNCE) return;
         lastWheel = now;
-        go(current + dir, dir);
+        setSlide(current + dir);
       }, { passive: false });
 
-      sticky.addEventListener('touchstart', function() {
-        sticky.style.transform = 'scale(1.018)';
-        sticky.style.boxShadow = '0 36px 88px rgba(71,55,40,0.18)';
+      // Mobile/touch: swipe orizzontale per sfogliare
+      var startX = 0, startY = 0, tracking = false;
+      var THRESHOLD = 40;
+      sticky.addEventListener('touchstart', function (e) {
+        var t = e.changedTouches[0];
+        startX = t.clientX; startY = t.clientY; tracking = true;
       }, { passive: true });
-      sticky.addEventListener('touchend', function() {
-        sticky.style.transform = '';
-        sticky.style.boxShadow = '';
+      sticky.addEventListener('touchend', function (e) {
+        if (!tracking) return;
+        tracking = false;
+        var t = e.changedTouches[0];
+        var dx = t.clientX - startX;
+        var dy = t.clientY - startY;
+        // solo swipe prevalentemente orizzontale, per non rubare lo scroll verticale
+        if (Math.abs(dx) < THRESHOLD || Math.abs(dx) < Math.abs(dy)) return;
+        setSlide(current + (dx < 0 ? 1 : -1));
       }, { passive: true });
     }());
 

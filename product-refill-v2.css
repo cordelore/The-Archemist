@@ -588,6 +588,7 @@ main { background: #faf9f6; }
   .pship-grid { grid-template-columns: 1fr; max-width: 100%; }
   .product-tabs { margin-top: 72px; }
   .ptab { padding: 16px 18px; font-size: 10px; }
+  .pcta { height: 72px; }
 }
 
 @media (max-width: 480px) {
@@ -596,6 +597,6 @@ main { background: #faf9f6; }
     align-items: stretch;
   }
   .pqty { justify-content: center; }
-  .pcta { height: 54px; }
+  .pcta { height: 72px; }
   .pperks { gap: 16px; }
 }

@@ -337,6 +337,7 @@
 
 @media (max-width: 768px) {
   .mf-hero__inner { padding: 100px 0 80px; }
+  .mf-hero__bg    { background-image: url('archemist-01.jpg'); }
   .mf-chap        { padding: 100px 24px; }
   .mf-final       { aspect-ratio: 3 / 2; min-height: 420px; padding: 80px 24px; }
   .mf-archetypes  { gap: 18px 14px; }

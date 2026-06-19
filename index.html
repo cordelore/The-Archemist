@@ -91,8 +91,11 @@
        HERO — video a tutto schermo: herovideo.mp4
   ============================================================ -->
   <section class="hero" id="home">
-    <video class="hero__video" autoplay loop muted playsinline>
-      <source src="herovideo (2).mp4" type="video/mp4">
+    <video class="hero__video hero__video--desktop" autoplay loop muted playsinline>
+      <source src="herovideo.mp4" type="video/mp4">
+    </video>
+    <video class="hero__video hero__video--mobile" autoplay loop muted playsinline>
+      <source src="assets/videoheromobile.mp4" type="video/mp4">
     </video>
     <div class="hero__overlay"></div>
     <div class="hero__content">
@@ -268,9 +271,9 @@
     <div class="essenze__panels" id="essenzePanels">
 
       <div class="essenze__panel is-active" data-frag="animapura" style="--frag-col:#00A3CC">
-        <div class="essenze__img"><span>fragrance-animapura.jpg</span></div>
+        <div class="essenze__img"><img src="animapurahero.jpg" alt="Animapura"></div>
         <div class="essenze__info">
-          <p class="essenze__desc">ANIMAPURA è una fragranza fresca e cristallina che richiama la purezza dell'acqua, con note frizzanti e aromatiche che rinvigoriscono i sensi e rigenerano gli ambienti con un'eleganza moderna e trasparente.</p>
+          <p class="essenze__desc"><span class="essenze__name">ANIMAPURA</span> è una fragranza fresca e cristallina che richiama la purezza dell'acqua, con note frizzanti e aromatiche che rinvigoriscono i sensi e rigenerano gli ambienti con un'eleganza moderna e trasparente.</p>
           <div class="essenze__notes">
             <div class="essenze__note"><span class="essenze__note-k">Note di Testa</span><span class="essenze__note-v">Limone ghiacciato, Timo</span></div>
             <div class="essenze__note"><span class="essenze__note-k">Note di Cuore</span><span class="essenze__note-v">Brezza marina, Fiori acquatici</span></div>
@@ -280,9 +283,9 @@
       </div>
 
       <div class="essenze__panel" data-frag="esperide" style="--frag-col:#F28B2D">
-        <div class="essenze__img"><span>fragrance-esperide.jpg</span></div>
+        <div class="essenze__img"><img src="esperidehero.jpg" alt="Esperide"></div>
         <div class="essenze__info">
-          <p class="essenze__desc">ESPERIDE è un agrumato verde brillante e raffinato che unisce la freschezza del pompelmo rosa e del petitgrain in una fragranza d'ambiente luminosa e contemporanea, ideale per valorizzare gli spazi con naturale eleganza.</p>
+          <p class="essenze__desc"><span class="essenze__name">ESPERIDE</span> è un agrumato verde brillante e raffinato che unisce la freschezza del pompelmo rosa e del petitgrain in una fragranza d'ambiente luminosa e contemporanea, ideale per valorizzare gli spazi con naturale eleganza.</p>
           <div class="essenze__notes">
             <div class="essenze__note"><span class="essenze__note-k">Note di Testa</span><span class="essenze__note-v">Pompelmo rosa, Petitgrain</span></div>
             <div class="essenze__note"><span class="essenze__note-k">Note di Cuore</span><span class="essenze__note-v">Gelsomino, Eucalipto</span></div>
@@ -293,11 +296,11 @@
 
       <div class="essenze__panel" data-frag="noor" style="--frag-col:#E62D39">
         <div class="essenze__img essenze__img--hover">
-          <img class="essenze__img-base" src="noorfragrance.png" alt="Noor">
+          <img class="essenze__img-base" src="noorhero.jpg" alt="Noor">
           <img class="essenze__img-over" src="noorfragrance2.png" alt="Noor — hover">
         </div>
         <div class="essenze__info">
-          <p class="essenze__desc">NOOR è una fragranza d'ambiente intensa e seducente, in cui la dolcezza calda dell'arancia candita incontra il pepe rosa per creare un bouquet avvolgente e vibrante che dona carattere agli ambienti.</p>
+          <p class="essenze__desc"><span class="essenze__name">NOOR</span> è una fragranza d'ambiente intensa e seducente, in cui la dolcezza calda dell'arancia candita incontra il pepe rosa per creare un bouquet avvolgente e vibrante che dona carattere agli ambienti.</p>
           <div class="essenze__notes">
             <div class="essenze__note"><span class="essenze__note-k">Note di Testa</span><span class="essenze__note-v">Arancia candita, Pepe rosa</span></div>
             <div class="essenze__note"><span class="essenze__note-k">Note di Cuore</span><span class="essenze__note-v">Fresia, Patchouly</span></div>
@@ -307,9 +310,9 @@
       </div>
 
       <div class="essenze__panel" data-frag="kiyomi" style="--frag-col:#84C6A0">
-        <div class="essenze__img"><span>fragrance-kiyomi.jpg</span></div>
+        <div class="essenze__img"><img src="kiyomihero.jpg" alt="Kiyomi"></div>
         <div class="essenze__info">
-          <p class="essenze__desc">KIYOMI è una fragranza fresca e rigenerante che combina lime, fiori d'arancio, eucalipto e magnolia, diffondendo negli spazi un'atmosfera vivace, elegante e naturalmente luminosa.</p>
+          <p class="essenze__desc"><span class="essenze__name">KIYOMI</span> è una fragranza fresca e rigenerante che combina lime, fiori d'arancio, eucalipto e magnolia, diffondendo negli spazi un'atmosfera vivace, elegante e naturalmente luminosa.</p>
           <div class="essenze__notes">
             <div class="essenze__note"><span class="essenze__note-k">Note di Testa</span><span class="essenze__note-v">Lime, Fiori d'arancio</span></div>
             <div class="essenze__note"><span class="essenze__note-k">Note di Cuore</span><span class="essenze__note-v">Eucalipto, Magnolia</span></div>
@@ -319,9 +322,9 @@
       </div>
 
       <div class="essenze__panel" data-frag="nayeli" style="--frag-col:#A7A2C2">
-        <div class="essenze__img"><span>fragrance-nayeli.jpg</span></div>
+        <div class="essenze__img"><img src="nayelihero.jpg" alt="Nayeli"></div>
         <div class="essenze__info">
-          <p class="essenze__desc">NAYELI è una fragranza d'ambiente di eleganza senza tempo, dove aldeidi e bergamotto aprono un accordo luminoso e raffinato che avvolge gli ambienti in una sofisticata armonia olfattiva.</p>
+          <p class="essenze__desc"><span class="essenze__name">NAYELI</span> è una fragranza d'ambiente di eleganza senza tempo, dove aldeidi e bergamotto aprono un accordo luminoso e raffinato che avvolge gli ambienti in una sofisticata armonia olfattiva.</p>
           <div class="essenze__notes">
             <div class="essenze__note"><span class="essenze__note-k">Note di Testa</span><span class="essenze__note-v">Aldeidi, Bergamotto</span></div>
             <div class="essenze__note"><span class="essenze__note-k">Note di Cuore</span><span class="essenze__note-v">Lavanda, Mughetto</span></div>
@@ -331,9 +334,9 @@
       </div>
 
       <div class="essenze__panel" data-frag="joy" style="--frag-col:#E35499">
-        <div class="essenze__img"><span>fragrance-joy.jpg</span></div>
+        <div class="essenze__img"><img src="joyhero.jpg" alt="Joy"></div>
         <div class="essenze__info">
-          <p class="essenze__desc">JOY è una fragranza vibrante e sensuale che unisce le note agrumate e resinose dell'elemi e del fiore di limone in un'esplosione di energia luminosa, perfetta per ravvivare e impreziosire ogni ambiente.</p>
+          <p class="essenze__desc"><span class="essenze__name">JOY</span> è una fragranza vibrante e sensuale che unisce le note agrumate e resinose dell'elemi e del fiore di limone in un'esplosione di energia luminosa, perfetta per ravvivare e impreziosire ogni ambiente.</p>
           <div class="essenze__notes">
             <div class="essenze__note"><span class="essenze__note-k">Note di Testa</span><span class="essenze__note-v">Elemi, Fiore di limone</span></div>
             <div class="essenze__note"><span class="essenze__note-k">Note di Cuore</span><span class="essenze__note-v">Rosa, Gardenia</span></div>
@@ -343,9 +346,9 @@
       </div>
 
       <div class="essenze__panel" data-frag="aurum" style="--frag-col:#C5AB00">
-        <div class="essenze__img"><span>fragrance-aurum.jpg</span></div>
+        <div class="essenze__img"><img src="aurumhero.jpg" alt="Aurum"></div>
         <div class="essenze__info">
-          <p class="essenze__desc">AURUM è una fragranza luminosa e raffinata che sprigiona l'energia dolce dell'arancio e la freschezza del bergamotto, regalando agli spazi un'aura solare, contemporanea e ricca di vitalità.</p>
+          <p class="essenze__desc"><span class="essenze__name">AURUM</span> è una fragranza luminosa e raffinata che sprigiona l'energia dolce dell'arancio e la freschezza del bergamotto, regalando agli spazi un'aura solare, contemporanea e ricca di vitalità.</p>
           <div class="essenze__notes">
             <div class="essenze__note"><span class="essenze__note-k">Note di Testa</span><span class="essenze__note-v">Arancio dolce, Bergamotto</span></div>
             <div class="essenze__note"><span class="essenze__note-k">Note di Cuore</span><span class="essenze__note-v">Petali di rosa, Eucalipto</span></div>

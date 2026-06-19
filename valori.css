@@ -348,7 +348,12 @@
 }
 
 @media (max-width: 768px) {
-  .vl-hero    { aspect-ratio: 3 / 2; min-height: 460px; padding: calc(var(--nav-h) + 48px) 24px 48px; }
+  .vl-hero    {
+    aspect-ratio: 3 / 2; min-height: 460px; padding: calc(var(--nav-h) + 48px) 24px 48px;
+    background-image:
+      linear-gradient(180deg, rgba(7,6,0,0.42) 0%, rgba(7,6,0,0.74) 100%),
+      url('archemist-08.jpg');
+  }
   .vl-section { padding: 0 24px; margin-bottom: 80px; }
   .vl-hero + .vl-section { margin-top: 80px; }
   .vl-section__head { margin-bottom: 32px; }

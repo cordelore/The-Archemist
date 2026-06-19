@@ -34,7 +34,7 @@
       position: fixed;
       inset: 0;
       z-index: -2;
-      background: url('sfondoprova.webp') center / cover no-repeat;
+      background: url('./assets/sfondoprova.webp') center / cover no-repeat;
       background-attachment: fixed;
     }
     body::after {
@@ -502,6 +502,11 @@
       object-fit: cover;
       object-position: center top;
     }
+    .hero__video--mobile { display: none; }
+    @media (max-width: 600px) {
+      .hero__video--desktop { display: none; }
+      .hero__video--mobile { display: block; }
+    }
     .hero__overlay {
       position: absolute;
       inset: 0;
@@ -870,6 +875,7 @@
       line-height: 1.95;
       color: rgba(255,255,255,0.7);
     }
+    .essenze__name { color: var(--frag-col); font-weight: 600; }
     .essenze__notes { display: flex; flex-direction: column; gap: 12px; }
     .essenze__note { display: flex; gap: 18px; font-size: 13px; }
     .essenze__note-k {
@@ -1276,6 +1282,8 @@
 
       .features { padding: 80px 24px; }
       .feat__desc { padding-left: 0; }
+      /* Mobile: reveal per-card senza ritardo cumulativo */
+      .features__grid .feat-anim { transition-delay: 0s !important; }
 
       .prodotti { padding: 80px 24px; }
       .prodotti__grid { grid-template-columns: 1fr; max-width: 380px; }
@@ -1290,19 +1298,12 @@
         height: auto;
         padding: 60px 20px;
       }
+      /* Mobile: stesso carosello del desktop, sfogliabile via swipe */
       .rituale__sticky {
-        position: static;
         aspect-ratio: 4 / 3;
         max-width: 100%;
       }
-      .rituale__img {
-        position: static;
-        transform: none;
-        display: none;
-      }
-      .rituale__img.is-active { display: block; }
-      .rituale__img.is-above  { display: none; }
-      .rituale__dots { display: none; }
+      .rituale__dots { display: flex; }
     }
 
     /* ============================================================

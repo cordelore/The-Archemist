@@ -321,9 +321,16 @@
 }
 
 @media (max-width: 768px) {
+  .rt-hero__bg { background-image: url('archemist-10.jpg'); }
   .rt-intro   { padding: 80px 24px; }
   .rt-methods { padding: 0 24px 80px; }
   .rt-final   { aspect-ratio: 4 / 5; min-height: 480px; padding: 80px 24px; }
+
+  /* Step centrati su mobile */
+  .rt-method__content { align-items: center; text-align: center; }
+  .rt-method__head    { align-items: center; }
+  .rt-step            { justify-content: center; }
+  .rt-step__body      { align-items: center; }
 
   /* Mobile: il blocco è sempre visibile, entrano i singoli elementi
      (head, step, immagine) man mano che li scrolli a schermo. */
